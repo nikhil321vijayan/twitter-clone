@@ -1,0 +1,7 @@
+.sidebar__tweet {
+    background-color: var(--twitter-color) !important; /*Adding "!important" as we've overriding the MaterialUI CSS */
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+}
