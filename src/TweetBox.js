@@ -7,7 +7,7 @@ function TweetBox() {
     <div className="tweetBox">
       <form>
         <div className="tweetBox__input">
-          <Avatar src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fnaruto.fandom.com%2Fwiki%2FMangeky%25C5%258D_Sharingan&psig=AOvVaw1m0LlOLWRn4da06bHvfaOv&ust=1670368218537000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLiE89TM4_sCFQAAAAAdAAAAABAF" />
+          <Avatar>A</Avatar>
           <input placeholder="What's happening?" type="text" />
         </div>
         <input
