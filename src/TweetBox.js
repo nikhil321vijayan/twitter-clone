@@ -7,7 +7,8 @@ function TweetBox() {
     <div className="tweetBox">
       <form>
         <div className="tweetBox__input">
-          <Avatar>A</Avatar>
+          <Avatar src="https://animecorner.me/wp-content/uploads/2022/10/naruto.png" />
+
           <input placeholder="What's happening?" type="text" />
         </div>
         <input
