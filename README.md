@@ -68,3 +68,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Hooking up the react app with the firebase:
+
+1. Create a firebase project on their web application.
+2. Install firebase tools using "npm install -g firebase-tools" command.
+3. Install firebase package on the react project with "npm i firebase".
+4. Go to Project settings in Firebase and copy the firebaseConfig from the settings.
+5. Create a new component called firebase.js in the react app and paste the config in it and create an exportable component as shown below:
+   import firebase from "firebase";
+
+   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+   const firebaseConfig = {
+   apiKey: "AIzaSyA3ZsDciuD2KsQnY7YrNZjmGlHvo5-2QHY",
+   authDomain: "twitter-clone-e9b7e.firebaseapp.com",
+   projectId: "twitter-clone-e9b7e",
+   storageBucket: "twitter-clone-e9b7e.appspot.com",
+   messagingSenderId: "997135989318",
+   appId: "1:997135989318:web:9fb8fa19144e989517a847",
+   measurementId: "G-7QC801DREV",
+   };
+
+   const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+   const db = firebaseApp.firestore();
+
+   export default db;
