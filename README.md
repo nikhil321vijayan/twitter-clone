@@ -94,3 +94,68 @@ Hooking up the react app with the firebase:
    const db = firebaseApp.firestore();
 
    export default db;
+
+Deploying a react app on firebase:
+
+1.  run "firebase init" in the react app.
+2.  If not logged in, try logging in with the respective google account.
+3.  Select "Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys"
+4.  Select option "Use an existing project"
+5.  Then select the repo that needs to be deployed.
+6.  Type "build" when it prompts you to select a build folder.
+7.  Here's what it would look like:
+    ? What do you want to use as your public directory? build
+    ? Configure as a single-page app (rewrite all urls to /index.html)? Yes
+    ? Set up automatic builds and deploys with GitHub? No
+8.  Do "npm run build" to create a build.
+    Here's what you'll see:
+    $ npm run build
+    npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
+
+    > twitter-clone@0.1.0 build
+    > react-scripts build
+
+    Creating an optimized production build...
+    Compiled successfully.
+
+    File sizes after gzip:
+
+    198.3 kB build\static\js\main.8246b39a.js
+    1.79 kB build\static\js\787.e8607b80.chunk.js
+    1.12 kB build\static\css\main.3e25c136.css
+
+    The project was built assuming it is hosted at /.
+    You can control this with the homepage field in your package.json.
+
+    The build folder is ready to be deployed.
+    You may serve it with a static server:
+
+    npm install -g serve
+    serve -s build
+
+    Find out more about deployment here:
+
+    https://cra.link/deployment
+
+9.  So the build is ready, all that needs to be done is to deploy it.
+10. To deploy build run "firebase deploy" and here's what you'll see.
+    $ firebase deploy
+
+        === Deploying to 'twitter-clone-e9b7e'...
+
+        i deploying hosting
+        i hosting[twitter-clone-e9b7e]: beginning deploy...
+        i hosting[twitter-clone-e9b7e]: found 14 files in build
+
+        - hosting[twitter-clone-e9b7e]: file upload complete
+          i hosting[twitter-clone-e9b7e]: finalizing version...
+        - hosting[twitter-clone-e9b7e]: version finalized
+          i hosting[twitter-clone-e9b7e]: releasing new version...
+        - hosting[twitter-clone-e9b7e]: release complete
+
+        - Deploy complete!
+
+        Project Console: https://console.firebase.google.com/project/twitter-clone-e9b7e/overview
+        Hosting URL: https://twitter-clone-e9b7e.web.app
+
+    Deployment complete!
